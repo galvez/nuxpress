@@ -129,14 +129,14 @@ references will work as expected.
 
  ## Contributing
 
- **nuxpress* is missing a few features:
+ **nuxpress** is missing quite a few features, such as:
 
  - Progressive web app enhancements
  - Syntax highlighting for code blocks
 
  Plus the entry loading code can probably be improved to make better use of
  async I/O. My first attempts were giving me a headache so its current version
- processes everything linearly. PRs are most welcome.
+ processes everything linearly. PRs are most definitely welcome.
 
  ## License
 
