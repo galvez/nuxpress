@@ -42,7 +42,13 @@ if (process.server) {
   }
 
   entries = require('../entries.json').map((entry) => {
-    const md = fs.readFileSync(entry.markdown, 'utf8')
+    const md = fs.readFileSync(
+      // Required so deploying to Heroku works
+      process.env.NODE_ENV === 'production'
+        ? entry.markdown.replace(/^.*\/entries\//, './entries/')
+        : entry.markdown,
+      'utf8'
+    )
     permalinks[entry.permalink] = entry
     return Object.assign(entry, {
       summary: mdit.render(entry.summary)
