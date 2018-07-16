@@ -158,6 +158,7 @@ the `entries` folder down to `.nuxt` post-build to get it to work:
 
 - Progressive web app enhancements
 - Syntax highlighting for code blocks
+- A decent archiving system (`$archive` and `pages/archive.vue` is a hack)
 
 Plus the entry loading code can probably be improved to make better use of
 async I/O. My first attempts were giving me a headache so its current version

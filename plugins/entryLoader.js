@@ -1,6 +1,7 @@
 
 let entries
 const permalinks = {}
+const archive = {}
 
 if (process.server) {
 
@@ -41,7 +42,23 @@ if (process.server) {
     return mdit.render(transformed)
   }
 
+  const addArchiveEntry = (entry) => {
+    entry.published = new Date(entry.published)
+    const year = entry.published.getFullYear()
+    const month = (entry.published.getMonth() + 1)
+      .toString()
+      .padStart(2, '0')
+    if (!archive[year]) {
+      archive[year] = {}
+    }
+    if (!archive[year][month]) {
+      archive[year][month] = []
+    }
+    archive[year][month].unshift(entry)
+  }
+
   entries = require('../entries.json').map((entry) => {
+    addArchiveEntry(entry)
     const md = fs.readFileSync(
       // Required so deploying to Heroku works
       process.env.NODE_ENV === 'production'
@@ -62,6 +79,7 @@ if (process.server) {
 export default async (ctx) => {
   if (process.server) {
     ctx.app.$entries = entries
+    ctx.app.$archive = archive
     ctx.app.$permalinks = permalinks
   }
 }
