@@ -11,8 +11,7 @@ functionality for automatically setting up and launching a Vue app.
 
 While I see the value of having `vuepress` as a standalone CLI tool and 
 everything it does that Nuxt doesn't (e.g., all SEO-friendly publishing tweaks), 
-for me really its **golden feature** is streamlining Markdown in Vue files. And it's why I think VuePress should stay
-focused on documentation, which it does really well.
+for me really its **golden feature** is streamlining Markdown in Vue files.
 
 Now, I **really like** Nuxt's code organization standards. Having a blog as
 a Nuxt app makes sense, as it would give me total freedom for customization.
