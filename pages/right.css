@@ -1,0 +1,96 @@
+.right a, .right  a:active, .right a:visited {
+  color: #33658A;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.right a:hover {
+  color: #33658A !important;
+}
+
+.right {
+  padding-top: 40px;
+  background: #f7f7f5;
+  overflow-x: hidden;
+  padding: 20px;
+  width: 58%;
+  min-height: 100%;
+  font-size: 24px;
+  color: #1d1b16;
+}
+
+.right img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+.right p, .right blockquote {
+  font-size: 22px !important;
+}
+
+.right p img {
+  width: auto !important;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.right p.small {
+  font-size: 18px !important;
+  font-style: italic;
+}
+
+.right h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: 200;
+  font-weight: bold !important;
+}
+
+.right .timestamp {
+  font-size: 22px;
+  color: #000 !important
+}
+
+.right h1 a,
+.right h1 span {
+  color: #f12222;
+  font-weight: 600 !important;
+}
+
+.right h2 {
+  font-size: 25px;
+  font-weight: 500 !important;
+}
+.right blockquote {
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.right a {
+  font-weight: 400;
+}
+
+.right code {
+  font-family: 'Fira Mono';
+  font-size: 20px !important;
+  color: #561643 !important;
+}
+
+.right pre {
+  margin-left: 40px;
+  white-space: pre;
+  color: #561643;
+  font-family: 'Fira Mono';
+  overflow-x: scroll;
+}
+.right pre code {
+  font-size: 14px !important;
+  letter-spacing: -1px;
+}
+
+.right b.extra {
+  font-weight: 800 !important;
+}
