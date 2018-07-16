@@ -1,0 +1,33 @@
+{
+  "name": "nuxpress",
+  "version": "0.0.1",
+  "description": "Minimalist Markdown Blogging",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+  "author": "Jonas Galvez",
+  "dependencies": {
+    "nuxt": "^1.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "fs-extra": "^6.0.1",
+    "lodash": "^4.17.10",
+    "markdown-it": "^8.4.1",
+    "standard": "^10.0.2",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
