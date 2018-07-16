@@ -37,6 +37,11 @@
   margin-bottom: 5px;
 }
 
+.right p img[src$='#float-right'] {
+  float: right;
+  vertical-align: top;  
+}
+
 .right p.small {
   font-size: 18px !important;
   font-style: italic;
