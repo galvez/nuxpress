@@ -24,3 +24,11 @@ and conventions I could possibly manage.
 
 # Where the magic happens
 
+<table>
+<tr>
+<td>`nuxt.config.js`</td>
+<td>Supercharged with functions that load `.entry` files from a `entries/`
+directory.</td>
+</tr>
+</table>
+
