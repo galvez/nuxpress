@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const fs = require('fs-extra')
 const path = require('path')
 const lodash = require('lodash')
+
 const domain = 'hire.jonasgalvez.com.br'
 
 const isDirectory = (source) => {

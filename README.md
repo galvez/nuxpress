@@ -1,5 +1,11 @@
 # nuxpress: Minimalist Markdown Blogging
 
+Code that powers [http://hire.jonasgalvez.com.br][http://hire.jonasgalvez.com.br].
+
+Nuxt + Markdown + a fancy custom loader = **nuxpress**.
+
+## Intro
+
 **nuxpress** is the result of me reading through [VuePress][1]'s source code for
 a week. It doesn't have blogging support yet, so I set out to try and cook 
 something up with it. I learned a lot reading through Evan's code, but my 
@@ -104,7 +110,7 @@ to be performed during the test, represented by a [`TaskSet`][3] class.
 [3]: http://docs.locust.io/en/latest/api.html#taskset-class
 ```
 
-if you remove the second link, you get an aesthetically unpleasing unordered 
+If you remove the second link, you get an aesthetically unpleasing unordered 
 list. Plus you have to keep track of references, even if you use slugs as link 
 identifiers instead of numbers. In `nuxpress`, all you have to do is:
 
@@ -123,25 +129,43 @@ not ever having two references to the same link in paragraphs, and want a
 streamlined way of adding and editing them. Otherwise, regular Markdown link
 references will work as expected.
 
- ## Running
+## Running
 
- ```sh
- npm install
- npm run dev # development mode
- npm start # nuxt server
- ```
+```sh
+npm install
+npm run dev # development mode
+npm start # nuxt server
+```
 
- ## Contributing
+## Heroku
 
- **nuxpress** is missing quite a few features, such as:
+There's a special hack in `nuxt.config.js` to ensure the app works on 
+Heroku, which is currently used to host my website. I had to **copy**
+the `entries` folder down to `.nuxt` post-build to get it to work:
 
- - Progressive web app enhancements
- - Syntax highlighting for code blocks
+```js
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build && cp -r entries .nuxt/entries",
+    "start": "nuxt start",
+    "heroku-postbuild": "npm run build"
+  }
+```
 
- Plus the entry loading code can probably be improved to make better use of
- async I/O. My first attempts were giving me a headache so its current version
- processes everything linearly. PRs are most definitely welcome.
+## Contributing
 
- ## License
+**nuxpress** is missing quite a few features, such as:
 
- MIT
+- Progressive web app enhancements
+- Syntax highlighting for code blocks
+
+Plus the entry loading code can probably be improved to make better use of
+async I/O. My first attempts were giving me a headache so its current version
+processes everything linearly. PRs are most definitely welcome.
+
+## License
+
+MIT
+
+Although this repo is a boilerplate, all sample `entries/` and Vue layouts are 
+from my live blog. Feel free to reuse the layout, **but replace `entries/` with your own**.
