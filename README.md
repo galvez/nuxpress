@@ -26,9 +26,9 @@ and conventions I could possibly manage.
 
 <table>
 <tr>
-<td>`nuxt.config.js`</td>
-<td>Supercharged with functions that load `.entry` files from a `entries/`
-directory.</td>
+<td><b>nuxt.config.js</b></td>
+<td>Supercharged with functions that load <code>.entry</code> files from a 
+<code>entries/</code> directory.</td>
 </tr>
 </table>
 
