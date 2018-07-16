@@ -1,6 +1,6 @@
 # nuxpress: Minimalist Markdown Blogging
 
-Code that powers [http://hire.jonasgalvez.com.br][http://hire.jonasgalvez.com.br].
+Code that powers [http://hire.jonasgalvez.com.br](http://hire.jonasgalvez.com.br).
 
 Nuxt + Markdown + a fancy custom loader = **nuxpress**.
 
