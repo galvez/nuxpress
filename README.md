@@ -1,9 +1,9 @@
-# nuxpress: Minimalist Plain Text blogging
+# nuxpress: Minimalist Plain Text Blogging
 
 **nuxpress** is the result of me reading through [VuePress][1]'s source code for
 a week. It doesn't have blogging support yet, so I set out to try and cook 
 something up with it. I learned a lot reading through Evan's code, but my 
-feeling is that VuePress goes to great lenghts to replicate [Nuxt][2]'s 
+feeling is that VuePress goes to great lengths to replicate [Nuxt][2]'s 
 functionality for automatically setting up and launching a Vue app.
 
 [1]: https://vuepress.vuejs.org/
@@ -78,4 +78,38 @@ layout and CSS can be modified as you like.</td>
 altogether and replaced by whatever layout structure you're using.</td>
 </tr>
 </table>
+
+## Improved Markdown links
+
+I love Markdown, but the fact that you need to use a unique identifier for 
+link references makes things to hard to maintain. Here's an example:
+
+```
+To use it you need to [write a locustfile][1], which is just a Python file with
+at least one [Locust subclass][2]. Each Locust object specifies a list of tasks
+to be performed during the test, represented by a [`TaskSet`][3] class.
+
+[1]: http://docs.locust.io/en/latest/writing-a-locustfile.html
+[2]: http://docs.locust.io/en/latest/api.html#locust-class
+[3]: http://docs.locust.io/en/latest/api.html#taskset-class
+```
+
+if you remove the second link, you get an aesthetically unpleasing unordered 
+list. Plus you have to keep track of references, even if you use slugs as link 
+identifiers instead of numbers. In `nuxpress`, all you have to do is:
+
+```
+To use it you need to [write a locustfile][], which is just a Python file with
+at least one [Locust subclass][]. Each Locust object specifies a list of tasks
+to be performed during the test, represented by a [`TaskSet`][] class.
+
+[]: http://docs.locust.io/en/latest/writing-a-locustfile.html
+[]: http://docs.locust.io/en/latest/api.html#locust-class
+[]: http://docs.locust.io/en/latest/api.html#taskset-class
+```
+
+And it will automatically link ordered references. Use this if you're ok with
+not ever having two references to the same link in paragraphs, and want a 
+streamlined way of adding and editing them. Otherwise, regular Markdown link
+references will work as expected.
 
