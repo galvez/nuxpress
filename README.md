@@ -1,4 +1,4 @@
-# nuxpress: Minimalist Plain Text Blogging
+# nuxpress: Minimalist Markdown Blogging
 
 **nuxpress** is the result of me reading through [VuePress][1]'s source code for
 a week. It doesn't have blogging support yet, so I set out to try and cook 
@@ -51,7 +51,11 @@ the template, accessed via slug in the <code>$permalinks</code> hash.</td>
 
 If the loader encounters a directory under `entries`, it checks inside for an
 `.entry` file and copies all other files to `/static/entries/`, so you can 
-reference any assets in your `.entry` files
+reference any assets in your `.entry` files.
+
+The **first** and **second** _paragraphs_ of an `.entry` files are reserved
+for the **publishing date** and **title** respectively. The **publishing date**
+can be anything `Date.parse()` can handle.
 
 ## Files that need customization
 
@@ -115,3 +119,25 @@ not ever having two references to the same link in paragraphs, and want a
 streamlined way of adding and editing them. Otherwise, regular Markdown link
 references will work as expected.
 
+ ## Running
+
+ ```sh
+ npm install
+ npm run dev # development mode
+ npm start # nuxt server
+ ```
+
+ ## Contributing
+
+ **nuxpress* is missing a few features:
+
+ - Progressive web app enhancements
+ - Syntax highlighting for code blocks
+
+ Plus the entry loading code can probably be improved to make better use of
+ async I/O. My first attempts were giving me a headache so its current version
+ processes everything linearly. PRs are most welcome.
+
+ ## License
+
+ MIT
