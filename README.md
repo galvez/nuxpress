@@ -81,6 +81,10 @@ layout and CSS can be modified as you like.</td>
 <td>The left column in the default two-column layout. This can be removed 
 altogether and replaced by whatever layout structure you're using.</td>
 </tr>
+<tr>
+<td><b>head.js</b></td>
+<td>Base HTML head definitions used by <code>pages/*</code>.</td>
+</tr>
 </table>
 
 ## Improved Markdown links
