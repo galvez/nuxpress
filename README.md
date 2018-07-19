@@ -60,8 +60,9 @@ If the loader encounters a directory under `entries`, it checks inside for an
 reference any assets in your `.entry` files.
 
 The **first** and **second** _paragraphs_ of an `.entry` file are reserved
-for the **publishing date** and **title** respectively. The **publishing date**
-can be anything `Date.parse()` can handle.
+for the **publishing date** and **summary** respectively. The **publishing 
+date** can be anything `Date.parse()` can handle. Both are followed by the
+entry's Markdown block, which starts with `#` indicating the title (h1).
 
 ## Files that need customization
 
