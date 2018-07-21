@@ -1,6 +1,6 @@
 <template>
   <svg 
-    class="github" 
+    class="github-icon" 
     xmlns="http://www.w3.org/2000/svg" 
     width="24" 
     height="24" 
@@ -13,3 +13,18 @@
       stroke-width="2" />
   </svg>
 </template>
+
+<style>
+.github-icon {
+  fill: #F6AE2D;
+}
+.github-icon:hover {
+  fill: #F6AE2D;
+}
+.github-icon path {
+  stroke: #F6AE2D !important;
+}
+.github-icon:hover path {
+  stroke: #F6AE2D !important;
+}
+</style>

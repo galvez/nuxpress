@@ -11,6 +11,7 @@
       <a href="http://hire.jonasgalvez.com.br"><img src="/avatar.jpg"></a>
       <a href="http://github.com/galvez"><github-icon /></a>
       <a href="http://linkedin.com/in/jonasgalvez"><linkedin-icon /></a>
+      <a href="http://hire.jonasgalvez.com.br/atom.xml"><feed-icon /></a>
     </div>
     <p class="first">I'm <a href="mailto:jonasgalvez@gmail.com">Jonas Galvez</a>, 
     a JavaScript and Go engineer at <a href="http://stored.com.br/">STORED 
@@ -31,10 +32,12 @@
 <script>
 import GithubIcon from './GithubIcon'
 import LinkedinIcon from './LinkedinIcon'
+import FeedIcon from './FeedIcon'
 export default {
   components: {
     GithubIcon,
-    LinkedinIcon
+    LinkedinIcon,
+    FeedIcon
   }
 }
 </script>
@@ -87,19 +90,6 @@ export default {
     height: auto;
     margin-bottom: 30px;
   }
-  .left .sidebar svg {
-    fill: #F6AE2D;
-  }
-  .left .sidebar svg:hover {
-    fill: #F6AE2D;
-  }
-  .left .sidebar svg.github path {
-    stroke: #F6AE2D !important;
-  }
-  .left .sidebar svg.github:hover path {
-    stroke: #F6AE2D !important;
-  }
-
 
 li {
   margin-bottom: 10px;
