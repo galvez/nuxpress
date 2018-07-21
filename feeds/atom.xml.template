@@ -8,7 +8,7 @@
 		<email>jonasgalvez@gmail.com</email>
 		<uri>http://hire.jonasgalvez.com.br/</uri>
 	</author>
-	<updated>2017-08-25T00:00:00-00:00</updated>
+	<updated><%= entries[0].published.toISOString() %></updated>
 	<link href="http://hire.jonasgalvez.com.br/"/>
 	<% entries.forEach((entry) => { %><entry>
 		<id><%= entry.id %></id>
