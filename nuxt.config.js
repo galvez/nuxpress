@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const fs = require('fs-extra')
 const path = require('path')
 const lodash = require('lodash')
+const mdit = require('markdown-it')()
 
 const domain = 'hire.jonasgalvez.com.br'
 
@@ -112,7 +113,7 @@ const generateFeeds = () => {
 const routes = require('./pages/index')
 
 module.exports = {
-  plugins: ['~/plugins/entryLoader.js'],
+  plugins: ['~/plugins/nuxpress.js'],
   srcDir: './',
   router: {
     extendRoutes: (nuxtRoutes, resolve) => {
@@ -124,6 +125,10 @@ module.exports = {
     }
   },
   build: {
+    babel: {
+      presets: ['env', 'stage-2'],
+      plugins: ['transform-runtime', 'transform-do-expressions']
+    },
     plugins: [
       new webpack.IgnorePlugin(/^entries/)
     ],
