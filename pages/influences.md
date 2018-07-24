@@ -14,16 +14,17 @@ Hundred-Year Language][] and [How to Make Wealth][] are my favorite pieces.
 []: http://www.paulgraham.com/hundred.html
 []: http://www.paulgraham.com/wealth.html
 
-[Claus Wahlers][] is an [old school][] Flash and ActionScript hacker. He is the
-author of [DENG][], a crazy Flash browser implementation that implemented
-various W3C standards before they landed anywhere else. He also wrote [FC64][],
-a Commodore 64 emulator for Flash Player 9. We have all forgotten about Flash,
-but back in the day these were prime examples of ActionScript mastery. He 
-mentored me in my early years as a programmer and unwillingly taught me most of 
-my English over instant messaging.
+[Claus Wahlers][] is an [old school][] Flash and ActionScript hacker (currently
+[kicking ass on React-land][]). He is the author of [DENG][], a crazy Flash 
+browser implementation that implemented various W3C standards before they landed 
+anywhere else. He also wrote [FC64][], a Commodore 64 emulator for Flash Player 9.
+We have all forgotten about Flash, but back in the day these were prime examples 
+of ActionScript mastery. He mentored me in my early years as a programmer and 
+unwillingly taught me most of my English over instant messaging.
 
 []: http://wahlers.com.br/clausblog
 []: http://deng.com.br/
+[]: https://github.com/zeit/next-plugins/pull/159
 []: http://codeazur.com.br/stuff/fc64_final/
 
 [Mark Pilgrim][] blogged about technology and everything else for about 10 years

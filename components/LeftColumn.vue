@@ -9,13 +9,18 @@
     </div>
     <p class="first">I'm <a href="mailto:jonasgalvez@gmail.com">Jonas Galvez</a>, 
     a JavaScript and Go engineer at <a href="http://stored.com.br/">STORED 
-    e-commerce</a>.</p>
+    e-commerce</a>. I started my carreer as an ActionScript developer 18 years 
+    ago. Since then, I've had a 10-year long affair with Python and have now 
+    returned to ECMAScript land. </p>
+
     <p>I'm an eternal student of <a href="https://12factor.net/">distributed 
     systems</a> and practitioner of minimalism.</p>
     <p>I build and deploy my stuff with <a href="https://vuejs.org">Vue</a>, 
     <a href="https://nuxtjs.org">Nuxt</a>, <a href="https://golang.org">Go</a> 
-    and <a href="https://kubernetes.io">Kubernetes</a> nowadays. This is the 
-    scope of the articles published here.</p>
+    and <a href="https://kubernetes.io">Kubernetes</a> nowadays.</p>
+    
+    <p style="font-size: 14px">Check out my dedicated page to my professional <a href="/influences">influences</a>.</p>
+
     <p style="font-size: 14px">I am driven by 
     <a href="https://www.facebook.com/thedannyroddyweblog/photos/a.1222130331142621.1073741829.160367813985550/1215862991769355/?type=3">purpose</a>
     and cultivate a <a href="https://en.wikipedia.org/wiki/Meditations">stoic 
