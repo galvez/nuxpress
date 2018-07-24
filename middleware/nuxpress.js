@@ -47,6 +47,12 @@ export default async (ctx) => {
     if (params.pageSlug && app.$pages[params.pageSlug]) {
       source = await fs.readFile(app.$pages[params.pageSlug], 'utf-8')
       app.$page = transformMarkdownLinks(source)
+      const title = source.trimStart().match(/^#\s+(.*)/)
+      app.$title = do {
+        if (title && title.length > 1) {
+          title[1] 
+        }
+      }
     } else if (params.entrySlug && app.$permalinks[params.entrySlug]) {
       const entry = app.$permalinks[params.entrySlug]
       source = await fs.readFile(entry.markdown, 'utf-8')
