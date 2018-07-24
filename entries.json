@@ -1,0 +1,92 @@
+[
+  {
+    "permalink": "2018/Jun/16/My-Nuxt-and-Koa-Boilerplate",
+    "published": "2018-06-16T03:00:00.000Z",
+    "title": "My Nuxt and Koa Boilerplate",
+    "summary": "Notes on JSON-Pure APIs and a walkthrough of an experimental API gateway using \nGo's reflection capabilities.",
+    "publishedText": "June 16, 2018 ",
+    "id": "tag:hire.jonasgalvez.com.br,2018:1529118000000",
+    "markdown": "./entries/nuxt-boilerplate.entry"
+  },
+  {
+    "permalink": "2018/May/20/You-Don't-Need-REST",
+    "published": "2018-05-20T03:00:00.000Z",
+    "title": "You Don't Need REST",
+    "summary": "Notes on JSON-Pure APIs and a walkthrough of an experimental API gateway using \nGo's reflection capabilities.",
+    "publishedText": "May 20, 2018",
+    "id": "tag:hire.jonasgalvez.com.br,2018:1526785200000",
+    "markdown": "./entries/dont-need-rest.entry"
+  },
+  {
+    "permalink": "2017/Aug/25/Leaving-Python-for-JavaScript",
+    "published": "2017-08-25T03:00:00.000Z",
+    "title": "Leaving Python for JavaScript",
+    "summary": "A piece on my new web development stack following \nmy ongoing work on three Nuxt applications",
+    "publishedText": "August 25, 2017",
+    "id": "tag:hire.jonasgalvez.com.br,2017:1503630000000",
+    "markdown": "./entries/leaving-python/leaving-python.entry"
+  },
+  {
+    "permalink": "2017/Jul/23/Nuxt-and-ElementUI",
+    "published": "2017-07-23T03:00:00.000Z",
+    "title": "Nuxt and ElementUI",
+    "summary": "A 30-second introduction to Nuxt.js plus \nnotes on getting ElementUI to run with it.",
+    "publishedText": "July 23, 2017",
+    "id": "tag:hire.jonasgalvez.com.br,2017:1500778800000",
+    "markdown": "./entries/nuxt-elementui/nuxt-elementui.entry"
+  },
+  {
+    "permalink": "2017/Jul/16/My-Approach-to-Remote-Work",
+    "published": "2017-07-16T03:00:00.000Z",
+    "title": "My Approach to Remote Work",
+    "summary": "An account on tracking and maintaining progress.",
+    "publishedText": "July 16, 2017",
+    "id": "tag:hire.jonasgalvez.com.br,2017:1500174000000",
+    "markdown": "./entries/remote-work/remote-work.entry"
+  },
+  {
+    "permalink": "2017/Jun/23/Why-Choose-Vue.js",
+    "published": "2017-06-23T03:00:00.000Z",
+    "title": "Why Choose Vue.js",
+    "summary": "Here I present the main reasons why I chose Vue over React.",
+    "publishedText": "June 23, 2017",
+    "id": "tag:hire.jonasgalvez.com.br,2017:1498186800000",
+    "markdown": "./entries/choose-vue.entry"
+  },
+  {
+    "permalink": "2016/Apr/13/A-Million-Schema-Validations-on-Kubernetes",
+    "published": "2016-04-13T03:00:00.000Z",
+    "title": "A Million Schema Validations on Kubernetes",
+    "summary": "How I used Python and Kubernetes to perform large-scale,\nautomated schema validation tests against an API.",
+    "publishedText": "April 13, 2016",
+    "id": "tag:hire.jonasgalvez.com.br,2016:1460516400000",
+    "markdown": "./entries/schema-testing.entry"
+  },
+  {
+    "permalink": "2013/Mar/31/Embrace-Invisible-Labor",
+    "published": "2013-03-31T03:00:00.000Z",
+    "title": "Embrace Invisible Labor",
+    "summary": "What if you spent 80% of the time thinking and \nonly 20% of the time actually typing things in?",
+    "publishedText": "March 31, 2013",
+    "id": "tag:hire.jonasgalvez.com.br,2013:1364698800000",
+    "markdown": "./entries/invisible-labor.entry"
+  },
+  {
+    "permalink": "2004/Sep/25/A-40-line-Feed-Aggregator",
+    "published": "2004-09-25T03:00:00.000Z",
+    "title": "A 40-line Feed Aggregator",
+    "summary": "A simple feed aggregator in Python leveraging the \nUniversal Feed Parser and the `__cmp__` method.",
+    "publishedText": "September 25, 2004",
+    "id": "tag:hire.jonasgalvez.com.br,2004:1096081200000",
+    "markdown": "./entries/py-aggregator.entry"
+  },
+  {
+    "permalink": "2004/Jun/14/Atom-W3C/IETF-Discussion",
+    "published": "2004-06-14T03:00:00.000Z",
+    "title": "Atom W3C/IETF Discussion",
+    "summary": "A noteworthy interchange from the AtomSyntax mailing-list \nand a reminder on IETF's importance for the web.s",
+    "publishedText": "June 14, 2004",
+    "id": "tag:hire.jonasgalvez.com.br,2004:1087182000000",
+    "markdown": "./entries/atom-w3c-ietf.entry"
+  }
+]
