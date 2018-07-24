@@ -31,9 +31,9 @@ and conventions I could possibly manage.
 ## What it does
 
 - Takes **.entry** files from the **entries/** directory and uses the first and 
-second paragraphs for title and summary respectively, and following Markdown 
-text to create a **chronological** entry. A permalink is automatically created
-and it gets printed (in descending order) in the index page.
+second paragraphs for publishing date and summary respectively, and following 
+Markdown text to create a **chronological** entry. A permalink is automatically 
+created and it gets printed (in descending order) in the index page.
 
 - Takes **.md** files from the **pages/** directory and makes them available
 at a path corresponding to the filename, so `pages/page.md` becomes `/page`.
