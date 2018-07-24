@@ -28,7 +28,11 @@
 }
 
 .right p, .right blockquote {
-  font-size: 22px !important;
+  font-size: 22px;
+}
+
+.right blockquote {
+  font-style: italic;
 }
 
 .right p img {
@@ -80,7 +84,7 @@
 
 .right code {
   font-family: 'Fira Mono';
-  font-size: 20px !important;
+  font-size: 20px;
   color: #561643 !important;
 }
 
@@ -92,7 +96,7 @@
   overflow-x: scroll;
 }
 .right pre code {
-  font-size: 14px !important;
+  font-size: 14px;
   letter-spacing: -1px;
 }
 
