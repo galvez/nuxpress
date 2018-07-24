@@ -1,17 +1,11 @@
 <template>
   <section class="left">
-    <!--div class="mobile">
-    <p>Hi, I'm Jonas Galvez, an engineer at <a href="http://stored.com.br/">STORED</a>.
-      <template v-if="!$route.path !== '/'">
-        <br>Check out <a href="/">my other articles</a>.
-      </template>
-    </p>
-    </div-->
     <div class="sidebar">
       <a href="http://hire.jonasgalvez.com.br"><img src="/avatar.jpg"></a>
       <a href="http://github.com/galvez"><github-icon /></a>
       <a href="http://linkedin.com/in/jonasgalvez"><linkedin-icon /></a>
       <a href="http://hire.jonasgalvez.com.br/atom.xml"><feed-icon /></a>
+      <a href="https://twitter.com/anothergalvez"><twitter-icon /></a>
     </div>
     <p class="first">I'm <a href="mailto:jonasgalvez@gmail.com">Jonas Galvez</a>, 
     a JavaScript and Go engineer at <a href="http://stored.com.br/">STORED 
@@ -33,11 +27,13 @@
 import GithubIcon from './GithubIcon'
 import LinkedinIcon from './LinkedinIcon'
 import FeedIcon from './FeedIcon'
+import TwitterIcon from './TwitterIcon'
 export default {
   components: {
     GithubIcon,
     LinkedinIcon,
-    FeedIcon
+    FeedIcon,
+    TwitterIcon
   }
 }
 </script>

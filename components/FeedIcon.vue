@@ -11,8 +11,8 @@
 
 <style>
 .feed-icon .button {
-  stroke: none;
-  fill: orange;
+  fill: #F6AE2D;
+  fill: #F6AE2D;
 }
 .feed-icon .symbol {
   stroke: none;
