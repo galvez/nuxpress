@@ -8,6 +8,7 @@ export default {
   ],
   link: [
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Old+Standard+TT' },
-    { rel: 'stylesheet', href: 'https://code.cdn.mozilla.net/fonts/fira.css' }
+    { rel: 'stylesheet', href: 'https://code.cdn.mozilla.net/fonts/fira.css' },
+    { rel: 'stylesheet', href: '/mobile.css' }
   ]
 }

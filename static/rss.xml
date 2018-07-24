@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Jonas Galvez</title>
+		<link>http://hire.jonasgalvez.com.br/</link>
+		<description>Jonas Galvez</description>
+		<item>
+			<link>http://hire.jonasgalvez.com.br/2018/Jun/16/My-Nuxt-and-Koa-Boilerplate</link>
+            <guid>tag:hire.jonasgalvez.com.br,2018:1529118000000</guid>
+	        <pubDate>Sat Jun 16 2018 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>My Nuxt and Koa Boilerplate</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2018/May/20/You-Don't-Need-REST</link>
+            <guid>tag:hire.jonasgalvez.com.br,2018:1526785200000</guid>
+	        <pubDate>Sun May 20 2018 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>You Don't Need REST</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2017/Aug/25/Leaving-Python-for-JavaScript</link>
+            <guid>tag:hire.jonasgalvez.com.br,2017:1503630000000</guid>
+	        <pubDate>Fri Aug 25 2017 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>Leaving Python for JavaScript</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2017/Jul/23/Nuxt-and-ElementUI</link>
+            <guid>tag:hire.jonasgalvez.com.br,2017:1500778800000</guid>
+	        <pubDate>Sun Jul 23 2017 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>Nuxt and ElementUI</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2017/Jul/16/My-Approach-to-Remote-Work</link>
+            <guid>tag:hire.jonasgalvez.com.br,2017:1500174000000</guid>
+	        <pubDate>Sun Jul 16 2017 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>My Approach to Remote Work</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2017/Jun/23/Why-Choose-Vue.js</link>
+            <guid>tag:hire.jonasgalvez.com.br,2017:1498186800000</guid>
+	        <pubDate>Fri Jun 23 2017 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>Why Choose Vue.js</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2016/Apr/13/A-Million-Schema-Validations-on-Kubernetes</link>
+            <guid>tag:hire.jonasgalvez.com.br,2016:1460516400000</guid>
+	        <pubDate>Wed Apr 13 2016 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>A Million Schema Validations on Kubernetes</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2013/Mar/31/Embrace-Invisible-Labor</link>
+            <guid>tag:hire.jonasgalvez.com.br,2013:1364698800000</guid>
+	        <pubDate>Sun Mar 31 2013 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>Embrace Invisible Labor</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2004/Sep/25/A-40-line-Feed-Aggregator</link>
+            <guid>tag:hire.jonasgalvez.com.br,2004:1096081200000</guid>
+	        <pubDate>Sat Sep 25 2004 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>A 40-line Feed Aggregator</description>
+	    </item>
+	    <item>
+			<link>http://hire.jonasgalvez.com.br/2004/Jun/14/Atom-W3C/IETF-Discussion</link>
+            <guid>tag:hire.jonasgalvez.com.br,2004:1087182000000</guid>
+	        <pubDate>Mon Jun 14 2004 00:00:00 GMT-0300 (Brasilia Standard Time)</pubDate>
+	        <description>Atom W3C/IETF Discussion</description>
+	    </item>
+	    
+	</channel>
+</rss>

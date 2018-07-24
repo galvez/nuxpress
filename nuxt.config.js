@@ -3,6 +3,8 @@ const webpack = require('webpack')
 const fs = require('fs-extra')
 const path = require('path')
 const lodash = require('lodash')
+const mdit = require('markdown-it')()
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const domain = 'hire.jonasgalvez.com.br'
 
@@ -31,7 +33,7 @@ const parseEntry = (entryFile) => {
     published,
     publishedText,
     id: `tag:${domain},${published.getFullYear()}:${published.getTime()}`,
-    markdown: entryFile
+    markdown: entryFile.replace(/^.*\/entries\//, './entries/')
   }
 }
 
@@ -112,7 +114,7 @@ const generateFeeds = () => {
 const routes = require('./pages/index')
 
 module.exports = {
-  plugins: ['~/plugins/entryLoader.js'],
+  plugins: ['~/plugins/nuxpress.js'],
   srcDir: './',
   router: {
     extendRoutes: (nuxtRoutes, resolve) => {
@@ -124,8 +126,16 @@ module.exports = {
     }
   },
   build: {
+    babel: {
+      presets: ['env', 'stage-2'],
+      plugins: ['transform-runtime', 'transform-do-expressions']
+    },
     plugins: [
-      new webpack.IgnorePlugin(/^entries/)
+      new webpack.IgnorePlugin(/^entries/),
+      new CopyWebpackPlugin([
+        { from: 'entries/*', to: 'entries/' },
+        { from: 'pages/*.md', to: 'pages/' }
+      ])
     ],
     extend (config, { isDev }) {
       // Generate entries.json file with all entry metadata
