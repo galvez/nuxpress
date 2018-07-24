@@ -4,6 +4,7 @@ const fs = require('fs-extra')
 const path = require('path')
 const lodash = require('lodash')
 const mdit = require('markdown-it')()
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const domain = 'hire.jonasgalvez.com.br'
 
@@ -32,7 +33,7 @@ const parseEntry = (entryFile) => {
     published,
     publishedText,
     id: `tag:${domain},${published.getFullYear()}:${published.getTime()}`,
-    markdown: entryFile
+    markdown: entryFile.replace(/^.*\/entries\//, './entries/')
   }
 }
 
@@ -130,7 +131,11 @@ module.exports = {
       plugins: ['transform-runtime', 'transform-do-expressions']
     },
     plugins: [
-      new webpack.IgnorePlugin(/^entries/)
+      new webpack.IgnorePlugin(/^entries/),
+      new CopyWebpackPlugin([
+        { from: 'entries/*', to: 'entries/' },
+        { from: 'pages/*.md', to: 'pages/' }
+      ])
     ],
     extend (config, { isDev }) {
       // Generate entries.json file with all entry metadata

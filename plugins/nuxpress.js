@@ -30,6 +30,7 @@ if (process.server) {
     .filter((i) => i.match(/\.md$/))
     .forEach((page) => {
       pages[page.split('.md')[0]] = path.join('./pages', page)
+        .replace(/^.*\/pages\//, './pages/')
     })
 
   entries = require('../entries.json').map((entry) => {
