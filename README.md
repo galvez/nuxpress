@@ -58,7 +58,7 @@ contains entry metadata) in Nuxt's <code>app</code>.</td>
 <td><b>middleware/nuxpress.js</b></td>
 <td>Infers the request URI and uses the provided <code>$entries</code> and 
 <code>$pages</code> to read and process files, before passing them down as
-<code>$entry<code> or <code>$page</code> to Vue templates.</td>
+<code>$entry</code> or <code>$page</code> to Vue templates.</td>
 </tr>
 <tr>
 <td><b>pages/index.vue</b></td>
