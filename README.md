@@ -63,7 +63,7 @@ contains entry metadata) in Nuxt's <code>app</code>.</td>
 <tr>
 <td><b>pages/index.vue</b></td>
 <td><code>asyncData()</code> makes <code>entries</code> available to 
-the template. Entries have automatically descending ordering.</td>
+the template. Entries are in listed in descending order.</td>
 </tr>
 <tr>
 <td><b>pages/entry.vue</b></td>
