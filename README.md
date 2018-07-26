@@ -68,12 +68,12 @@ the template. Entries are in listed in descending order.</td>
 <tr>
 <td><b>pages/entry.vue</b></td>
 <td><code>asyncData()</code> makes <code>entry</code> available to 
-the template, previously provided by the `nuxpress` middleware.</td>
+the template, previously provided by the <code>nuxpress</code> middleware.</td>
 </tr>
 <tr>
 <td><b>pages/page.vue</b></td>
 <td><code>asyncData()</code> makes <code>page</code> available to 
-the template, previously provided by the `nuxpress` middleware.</td>
+the template, previously provided by the <code>nuxpress</code> middleware.</td>
 </tr>
 </table>
 
