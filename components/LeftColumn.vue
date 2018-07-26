@@ -1,11 +1,21 @@
 <template>
   <section class="left">
     <div class="sidebar">
-      <a href="http://hire.jonasgalvez.com.br"><img src="/avatar.jpg"></a>
-      <a href="http://github.com/galvez"><github-icon /></a>
-      <a href="http://linkedin.com/in/jonasgalvez"><linkedin-icon /></a>
-      <a href="http://hire.jonasgalvez.com.br/atom.xml"><feed-icon /></a>
-      <a href="https://twitter.com/anothergalvez"><twitter-icon /></a>
+      <a href="http://hire.jonasgalvez.com.br">
+        <img class="avatar" src="/avatar.jpg">
+      </a>
+      <a href="http://github.com/galvez">
+        <img class="icon" src="~/assets/icons/github.svg">
+      </a>
+      <a href="http://linkedin.com/in/jonasgalvez">
+        <img class="icon" src="~/assets/icons/linkedin.svg">
+      </a>
+      <a href="http://hire.jonasgalvez.com.br/atom.xml">
+        <img class="icon" src="~/assets/icons/feed.svg">
+      </a>
+      <a href="https://twitter.com/anothergalvez">
+        <img class="icon" src="~/assets/icons/twitter.svg">
+      </a>
     </div>
     <p class="first">I'm <a href="mailto:jonasgalvez@gmail.com">Jonas Galvez</a>, 
     a JavaScript and Go engineer at <a href="http://stored.com.br/">STORED 
@@ -28,21 +38,6 @@
   </section>
 </template>
 
-<script>
-import GithubIcon from './GithubIcon'
-import LinkedinIcon from './LinkedinIcon'
-import FeedIcon from './FeedIcon'
-import TwitterIcon from './TwitterIcon'
-export default {
-  components: {
-    GithubIcon,
-    LinkedinIcon,
-    FeedIcon,
-    TwitterIcon
-  }
-}
-</script>
-
 <style>
 .left {
   position: relative;
@@ -64,34 +59,33 @@ export default {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-  .left .sidebar {
-    position: absolute;
-    top: 45px;
-    left: 130px;
-    width: 45px;
-  }
-  .left-mobile {
-    display: none;
-  }
-  .left .sidebar img {
-    margin-left: -10px;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 32px 32px 32px 32px;
-    -moz-border-radius: 32px 32px 32px 32px;
-    -webkit-border-radius: 32px 32px 32px 32px;
-    border: 3px solid #F6AE2D;
-    overflow: hidden;
-  }
-  .left .sidebar svg {
-    display: block;
-    width: 40px;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
+.left .sidebar {
+  position: absolute;
+  top: 45px;
+  left: 130px;
+  width: 45px;
+}
+.left-mobile {
+  display: none;
+}
+.left .sidebar .avatar {
+  margin-left: -10px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 32px 32px 32px 32px;
+  -moz-border-radius: 32px 32px 32px 32px;
+  -webkit-border-radius: 32px 32px 32px 32px;
+  border: 3px solid #F6AE2D;
+  overflow: hidden;
+}
+.left .sidebar .icon {
+  display: block;
+  width: 40px;
+  height: auto;
+  margin-bottom: 30px;
+}
 li {
   margin-bottom: 10px;
 }
