@@ -50,7 +50,7 @@ export default async (ctx) => {
       const title = source.trimStart().match(/^#\s+(.*)/)
       app.$title = do {
         if (title && title.length > 1) {
-          title[1] 
+          title[1]
         }
       }
     } else if (params.entrySlug && app.$permalinks[params.entrySlug]) {
