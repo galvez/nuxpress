@@ -9,7 +9,7 @@
   },
   "author": "Jonas Galvez",
   "dependencies": {
-    "nuxt": "^1.4.2"
+    "nuxt-edge": "^2.0.0-25569931.85a8af5"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
