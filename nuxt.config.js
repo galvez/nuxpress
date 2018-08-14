@@ -113,7 +113,7 @@ const generateFeeds = () => {
 
 const routes = require('./pages/index')
 
-module.exports = {
+export default {
   plugins: ['~/plugins/nuxpress.js'],
   srcDir: './',
   router: {
@@ -127,8 +127,7 @@ module.exports = {
   },
   build: {
     babel: {
-      presets: ['env', 'stage-2'],
-      plugins: ['transform-runtime', 'transform-do-expressions']
+      plugins: ['transform-do-expressions']
     },
     plugins: [
       new webpack.IgnorePlugin(/^entries/),
