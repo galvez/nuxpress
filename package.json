@@ -9,7 +9,6 @@
   },
   "author": "Jonas Galvez",
   "dependencies": {
-    "nuxt": "^1.4.2",
     "nuxt-edge": "^2.0.0-25578134.eb114a4"
   },
   "devDependencies": {
@@ -30,7 +29,6 @@
     "lodash": "^4.17.10",
     "markdown-it": "^8.4.1",
     "standard": "^10.0.2",
-    "webpack": "^3.10.0",
     "webpack-node-externals": "^1.6.0"
   }
 }
