@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const fs = require('fs-extra')
 const path = require('path')
 const lodash = require('lodash')
-const mdit = require('markdown-it')()
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const domain = 'hire.jonasgalvez.com.br'
