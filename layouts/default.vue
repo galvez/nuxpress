@@ -16,7 +16,8 @@ export default {
 body {
   position: relative;
   background: #2F4858;
-  width: 1440px;
+  min-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 .wrapper {
