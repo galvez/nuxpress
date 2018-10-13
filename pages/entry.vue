@@ -10,7 +10,6 @@ export default {
   middleware: 'nuxpress',
   asyncData ({ params, app, error }) {
     if (app.$entry) {
-      // console.dir(app.$entry)
       return { entry: app.$entry }
     }
     error({ statusCode: 404 })     
