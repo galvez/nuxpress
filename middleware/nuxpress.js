@@ -1,5 +1,9 @@
 
-const mdit = require('markdown-it')()
+const Markdown = do {
+  if (process.server) {
+    require('@dimerapp/markdown')
+  }
+}
 
 const fs = do {
   if (process.server) {
@@ -37,16 +41,18 @@ const transformMarkdownLinks = (md) => {
       return `][${linkIndex++}]`
     }
   })
-  return mdit.render(transformed)
+  return (new Markdown(transformed, {skipToc: true})).toHTML()
 }
 
 export default async (ctx) => {
   if (process.server) {
     let source
+    let page
     const { app, error, params } = ctx
     if (params.pageSlug && app.$pages[params.pageSlug]) {
       source = await fs.readFile(app.$pages[params.pageSlug], 'utf-8')
-      app.$page = transformMarkdownLinks(source)
+      page = await transformMarkdownLinks(source)
+      app.$page = page.contents
       const title = source.trimStart().match(/^#\s+(.*)/)
       app.$title = do {
         if (title && title.length > 1) {
@@ -56,8 +62,10 @@ export default async (ctx) => {
     } else if (params.entrySlug && app.$permalinks[params.entrySlug]) {
       const entry = app.$permalinks[params.entrySlug]
       source = await fs.readFile(entry.markdown, 'utf-8')
+      const hashSign = source.indexOf('#')
+      page = await transformMarkdownLinks(source.substr(hashSign))
       app.$entry = Object.assign(entry, {
-        html: transformMarkdownLinks(source.substr(source.indexOf('#')))
+        html: page.contents
       })
     }
   }

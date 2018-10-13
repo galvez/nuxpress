@@ -103,3 +103,7 @@
 .right b.extra {
   font-weight: 800 !important;
 }
+
+.right dimertitle {
+  display: none;
+}
