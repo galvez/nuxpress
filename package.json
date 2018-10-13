@@ -1,16 +1,15 @@
 {
-  "name": "nuxpress",
-  "version": "0.1.0",
-  "description": "Minimalist Markdown Blogging",
+  "name": "@nuxtjs/press",
+  "version": "1.0.0",
+  "description": "Minimalist publishing with Nuxt.js",
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "start": "nuxt start"
+    "dev": "nuxt test/fixture",
+    "lint": "eslint lib test",
+    "test": "npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "prepare": "npm run test"
   },
   "author": "Jonas Galvez",
-  "dependencies": {
-    "nuxt": "^2.0.0"
-  },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-do-expressions": "^6.22.0",
