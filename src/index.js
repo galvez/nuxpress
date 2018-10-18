@@ -1,3 +1,4 @@
+
 const path = require('path')
 const consola = require('consola')
 const webpack = require('webpack')
@@ -6,11 +7,6 @@ const path = require('path')
 const lodash = require('lodash')
 const mdit = require('markdown-it')()
 const logger = consola.withScope('nuxt:press')
-
-module.exports = function nuxtPress (_options) {
-  _options = Object.assign({}, this.options.press, _options)
-
-}
 
 const loadEntries = () => {
   const entriesRoot = path.resolve(__dirname, 'entries')
@@ -61,47 +57,12 @@ const generateFeeds = () => {
   fs.writeFileSync('./static/atom.xml', atomFeedTemplate(data))
 }
 
-const routes = require('./pages/index')
+// new webpack.IgnorePlugin(/^entries/),
+// new CopyWebpackPlugin([
+//   { from: 'entries/*', to: 'entries/' },
+//   { from: 'pages/*.md', to: 'pages/' }
+// ])
 
-export default {
-  plugins: ['~/plugins/nuxpress.js'],
-  srcDir: './',
-  router: {
-    extendRoutes: (nuxtRoutes, resolve) => {
-      nuxtRoutes.splice(0, nuxtRoutes.length, ...routes.map((route) => {
-        return Object.assign({}, route, {
-          component: resolve(__dirname, route.component)
-        })
-      }))
-    }
-  },
-  build: {
-    babel: {
-      plugins: ['transform-do-expressions']
-    },
-    plugins: [
-      new webpack.IgnorePlugin(/^entries/),
-      new CopyWebpackPlugin([
-        { from: 'entries/*', to: 'entries/' },
-        { from: 'pages/*.md', to: 'pages/' }
-      ])
-    ],
-    extend (config, { isDev }) {
-      // Generate entries.json file with all entry metadata
-      generateIndex()
-      // Generate /static/atom.xml and /static/rss.xml
-      generateFeeds()
-      // Tweak for GitHub pages
-      if (!isDev) {
-        config.output.publicPath = './_nuxt/'
-      } else {
-        // Ensure linting on dev mode
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+module.exports = function nuxtPress (_options) {
+  _options = Object.assign({}, this.options.press, _options)
 }
