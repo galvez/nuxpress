@@ -8,6 +8,8 @@ const lodash = require('lodash')
 const mdit = require('markdown-it')()
 const logger = consola.withScope('nuxt:press')
 
+const options = require('./common/options')
+
 const loadEntries = () => {
   const entriesRoot = path.resolve(__dirname, 'entries')
   const entries = []
@@ -63,6 +65,7 @@ const generateFeeds = () => {
 //   { from: 'pages/*.md', to: 'pages/' }
 // ])
 
-module.exports = function nuxtPress (_options) {
-  _options = Object.assign({}, this.options.press, _options)
+module.exports = function (userOptions) {
+  const templatesPath = join(__dirname, 'templates')
+  const options = { ...userOptions, ...options }  
 }
