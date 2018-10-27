@@ -9,20 +9,16 @@ const mdit = require('markdown-it')()
 const logger = consola.withScope('nuxt:press')
 const defaultOptions = require('./common/options')
 
-const generateEntryPermalink = (lang, title, published) => {
+const generateEntryPermalink = (title, published, lang = null) => {
   const slug = title.replace(/\s+/g, '-')
   const date = published.toString().split(/\s+/).slice(1, 4).reverse()
-  return `${lang}/${date[0]}/${date[2]}/${date[1]}/${slug}`
+  return `${lang ? `${lang}/` : ''}${date[0]}/${date[2]}/${date[1]}/${slug}`
 }
 
-const loadEntries = () => {
-  return languages.reduce((obj, lang) => {
-    return { ...obj, [lang]: loadEntriesByLang(lang) }
-  }, {})
-}
-
-const loadEntriesByLang = (lang) => {
-  const entriesRoot = path.resolve(__dirname, 'entries', lang)
+const loadEntries = (lang = null) => {
+  const entriesRoot = lang
+    ? path.resolve(__dirname, 'entries', lang)
+    : path.resolve(__dirname, 'entries')
   const entries = []
   const dirEntries = fs.readdirSync(entriesRoot)
   for (let i = 0; i < dirEntries.length; i++) {
@@ -30,15 +26,17 @@ const loadEntriesByLang = (lang) => {
     if (validEntry) {
       entries.push(
         Object.assign({}, {
-          permalink: generateEntryPermalink(lang, validEntry.title, validEntry.published),
+          permalink: generateEntryPermalink(
+            validEntry.title,
+            validEntry.published,
+            lang
+          ),
           published: validEntry.published.toISOString()
         }, validEntry)
       )
     }
   }
-  entries.sort((a, b) => {
-    return b.published - a.published
-  })
+  entries.sort((a, b) => b.published - a.published)
   return entries
 }
 
@@ -79,10 +77,26 @@ const generateFeeds = (entries) => {
 module.exports = function (userOptions) {
   const templatesPath = join(__dirname, 'templates')
   const options = { ...defaultOptions, ...userOptions }
-
-  for (const lang in options.languages) {
-
+  const isMultilingual = Array.isArray(options.languages) && options.languages.length
+  let entries
+  if (isMultilingual) {
+    entries = {}
+    for (const lang in options.languages) {
+      entries[lang] = loadEntries(lang)
+    }
+  } else {
+    entries = loadEntries()
   }
+
+  this.extendBuild((config) => {
+    config.plugins = [
+      new webpack.IgnorePlugin(/^entries/),
+      new CopyWebpackPlugin([
+        { from: 'entries/*', to: 'entries/' },
+        { from: 'pages/*.md', to: 'pages/' }
+      ])
+    ]
+  })
 
   this.addTemplate()
 }
