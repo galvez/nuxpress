@@ -7,11 +7,22 @@ const path = require('path')
 const lodash = require('lodash')
 const mdit = require('markdown-it')()
 const logger = consola.withScope('nuxt:press')
+const defaultOptions = require('./common/options')
 
-const options = require('./common/options')
+const generateEntryPermalink = (lang, title, published) => {
+  const slug = title.replace(/\s+/g, '-')
+  const date = published.toString().split(/\s+/).slice(1, 4).reverse()
+  return `${lang}/${date[0]}/${date[2]}/${date[1]}/${slug}`
+}
 
 const loadEntries = () => {
-  const entriesRoot = path.resolve(__dirname, 'entries')
+  return languages.reduce((obj, lang) => {
+    return { ...obj, [lang]: loadEntriesByLang(lang) }
+  }, {})
+}
+
+const loadEntriesByLang = (lang) => {
+  const entriesRoot = path.resolve(__dirname, 'entries', lang)
   const entries = []
   const dirEntries = fs.readdirSync(entriesRoot)
   for (let i = 0; i < dirEntries.length; i++) {
@@ -19,7 +30,7 @@ const loadEntries = () => {
     if (validEntry) {
       entries.push(
         Object.assign({}, {
-          permalink: generateEntryPermalink(validEntry.title, validEntry.published),
+          permalink: generateEntryPermalink(lang, validEntry.title, validEntry.published),
           published: validEntry.published.toISOString()
         }, validEntry)
       )
@@ -31,12 +42,6 @@ const loadEntries = () => {
   return entries
 }
 
-const generateEntryPermalink = (title, published) => {
-  const slug = title.replace(/\s+/g, '-')
-  const date = published.toString().split(/\s+/).slice(1, 4).reverse()
-  return `${date[0]}/${date[2]}/${date[1]}/${slug}`
-}
-
 const generateIndex = () => {
   fs.writeFileSync(
     path.resolve(__dirname, 'entries.json'),
@@ -44,19 +49,25 @@ const generateIndex = () => {
   )
 }
 
-const generateFeeds = () => {
-  const rssFeedTemplate = lodash.template(
-    fs.readFileSync('./feeds/rss.xml.template', 'utf8')
-  )
-  const atomFeedTemplate = lodash.template(
-    fs.readFileSync('./feeds/atom.xml.template', 'utf8')
-  )
-  const data = {
-    entries: entries.slice(0, 10),
-    domain
-  }
-  fs.writeFileSync('./static/rss.xml', rssFeedTemplate(data))
-  fs.writeFileSync('./static/atom.xml', atomFeedTemplate(data))
+const generateFeeds = (entries) => {
+  return languages.reduce((arr, lang) => {
+    const options = {
+      domain,
+      entries: entries[lang].slice(0, 10)
+    }
+    return arr.concat[
+      {
+        options,
+        src: './feeds/rss.xml.template',
+        dst: `../static/rss.${lang}.xml`,
+      },
+      {
+        options,
+        src: './feeds/atom.xml.template',
+        dst: `../static/atom.${lang}.xml`
+      }
+    ]
+  }, [])
 }
 
 // new webpack.IgnorePlugin(/^entries/),
@@ -67,5 +78,11 @@ const generateFeeds = () => {
 
 module.exports = function (userOptions) {
   const templatesPath = join(__dirname, 'templates')
-  const options = { ...userOptions, ...options }  
+  const options = { ...defaultOptions, ...userOptions }
+
+  for (const lang in options.languages) {
+
+  }
+
+  this.addTemplate()
 }
